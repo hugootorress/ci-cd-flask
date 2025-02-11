@@ -10,7 +10,7 @@ def hello():
 
 @app.route('/hugo')
 def saludopersonal():
-    return "Hola gordo"
+    return "Hola amigo"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT)

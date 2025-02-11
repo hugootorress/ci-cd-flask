@@ -16,6 +16,14 @@ class BasicTests(unittest.TestCase):
         self.assertEqual(result.status_code, 200)
         self.assertEqual(result.data.decode(), "Hello, World!")
 
+    def test_hugo(self):
+        # Envía una solicitud GET a la ruta '/hugo'
+        result = self.app.get('/hugo')
+        
+        # Verifica que la respuesta sea "Hola amigo"
+        self.assertEqual(result.status_code, 200)
+        self.assertEqual(result.data.decode(), "Hola amigo")
+
 
 if __name__ == "__main__":
     unittest.main()
