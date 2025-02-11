@@ -12,9 +12,9 @@ class BasicTests(unittest.TestCase):
         # Envía una solicitud GET a la ruta '/'
         result = self.app.get('/')
         
-        # Verifica que la respuesta sea "Hello, World!"
+        # Verifica que la respuesta sea "Hola mundo"
         self.assertEqual(result.status_code, 200)
-        self.assertEqual(result.data.decode(), "Hello, World!")
+        self.assertEqual(result.data.decode(), "Hola mundo")
 
     def test_hugo(self):
         # Envía una solicitud GET a la ruta '/hugo'
